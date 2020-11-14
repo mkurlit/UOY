@@ -1,1 +1,1 @@
-Week 2 - Activities
+**Week 2 - Activity 1**
