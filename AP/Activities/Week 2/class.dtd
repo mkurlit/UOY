@@ -1,0 +1,12 @@
+<!ELEMENT class (student*)>
+<!ELEMENT student (name, middlename?, surname, id, module*)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT middlename (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT module (module_name, assignment*)>
+<!ELEMENT module_name (#PCDATA)>
+<!ELEMENT assignment (type, sequence, score)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT sequence (#PCDATA)>
+<!ELEMENT score (#PCDATA)>
