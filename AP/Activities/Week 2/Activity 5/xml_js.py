@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 import numpy as np
+import json
 xml_tree = ET.parse('People.xml')
 root = xml_tree.getroot()
 
@@ -28,7 +29,7 @@ def xml_to_json(root):
         else:
             js[root.tag].append({k:v for k,v in root.attrib.items()})
 
-    return js
+    return json.dumps(js)
 
 
 
