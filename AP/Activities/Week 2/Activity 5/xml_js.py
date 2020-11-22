@@ -14,9 +14,9 @@ def xml_to_json(root):
         for el in xml_els:
             if el.getchildren():
                 if isinstance(js[root.tag],dict):
-                    js[root.tag].update(xml_mk(el))
+                    js[root.tag].update(xml_to_json(el))
                 else:
-                    js[root.tag].append(xml_mk(el))
+                    js[root.tag].append(xml_to_json(el))
             else:
                 if isinstance(js[root.tag], dict):
                     js[root.tag].update({el.tag: el.text})
