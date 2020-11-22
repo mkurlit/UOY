@@ -4,7 +4,7 @@ import numpy as np
 xml_tree = ET.parse('People.xml')
 root = xml_tree.getroot()
 
-def xml_mk(root):
+def xml_to_json(root):
     xml_els = root.getchildren()
     ## Create a dictionary with tag as a key and storing space as dict or list
     js = {root.tag: dict() if np.logical_or(len(xml_els)<=1,len(set([el.tag for el in xml_els]))!=1) else []}
